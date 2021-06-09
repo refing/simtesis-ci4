@@ -32,8 +32,23 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/homepage', 'Home::homepage');
+$routes->get('/', 'controller::index');
+$routes->get('/dashboard', 'controller::dashboard');
+$routes->get('/pendaftaran', 'controller::pendaftaran');
+$routes->get('/pendaftaran/sempro', 'controller::daftarsempro');
+$routes->get('/pendaftaran/sidang', 'controller::daftarsidang');
+$routes->get('/pendaftaran/yudisium', 'controller::daftaryudisium');
+$routes->get('/datadiri', 'controller::datadiri');
+$routes->get('/jadwal', 'controller::jadwal');
+$routes->get('/jadwal/sempro', 'controller::jadwalsempro');
+$routes->get('/jadwal/sidang', 'controller::jadwalsidang');
+$routes->get('/berkas', 'controller::berkas');
+$routes->get('/berkas/sempro', 'controller::berkassempro');
+$routes->get('/berkas/sidang', 'controller::berkassidang');
+$routes->get('/nilai', 'controller::nilai');
+$routes->get('/nilai/sempro', 'controller::nilaisempro');
+$routes->get('/nilai/sidang', 'controller::nilaisidang');
+$routes->get('/nilai/yudisium', 'controller::nilaiyudisium');
 
 /*
  * --------------------------------------------------------------------
