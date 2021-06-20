@@ -18,8 +18,14 @@ class site extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	function __construct(){
+		parent::__construct();
+		$this->load->model('product_model');
+	}
 	public function index()
 	{
-		$this->load->view('index');
+		// $this->load->view('index');
+		$data['product'] = $this->product_model->get_product();
+		$this->load->view('index',$data);
 	}
 }

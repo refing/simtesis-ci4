@@ -18,10 +18,30 @@ class login extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("user_model");
+        $this->load->library('form_validation');
+    }
+
 	public function index()
 	{
-		$this->load->view('login');
+		// $this->load->view('login');
+		// jika form login disubmit
+        if($this->input->post()){
+            if($this->user_model->doLogin()) redirect(site_url('dashboard'));
+        }
+
+        // tampilkan halaman login
+        $this->load->view("login");
 	}
+	public function logout()
+    {
+        // hancurkan semua sesi
+        $this->session->sess_destroy();
+        redirect(site_url('login'));
+    }
 	public function register()
 	{
 		$this->load->view('register');

@@ -26,7 +26,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url('login/logout') ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -109,14 +109,14 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <?php echo $users->nama ?>
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Selamat Datang, User</h1>
+                        <h1 class="mt-4">Selamat Datang, <?php echo $users->nama ?></h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Anda belum melakukan pendaftaran seminar proposal</li>
                         </ol>
