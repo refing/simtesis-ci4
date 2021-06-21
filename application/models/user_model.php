@@ -3,6 +3,21 @@
 class User_model extends CI_Model
 {
     private $_table = "user";
+    public $user_id;
+    public $nama;
+    public $password;
+    public $email;
+    public $role;
+    
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->nama = $post["nama"];
+        $this->email = $post["email"];
+        $this->password = password_hash($post["password"], PASSWORD_DEFAULT);
+        $this->role = $post["role"] ?? "mahasiswa";
+        $this->db->insert($this->_table, $this);
+    }
 
     public function doLogin(){
 		$post = $this->input->post();
@@ -17,13 +32,14 @@ class User_model extends CI_Model
             // periksa password-nya
             $isPasswordTrue = password_verify($post["password"], $user->password);
             // periksa role-nya
-            $isAdmin = $user->role == "admin";
+            // $isAdmin = $user->role == "admin";
 
             // jika password benar dan dia admin
-            if($isPasswordTrue && $isAdmin){ 
+            // if($isPasswordTrue && $isAdmin){ 
+            if($isPasswordTrue){ 
                 // login sukses yay!
                 $this->session->set_userdata(['user_logged' => $user]);
-                // $this->session->set_userdata(['username' => $user->nama]);
+                $this->session->set_userdata(['role' => $user->role]);
                 $this->_updateLastLogin($user->user_id);
                 return true;
             }
@@ -42,6 +58,7 @@ class User_model extends CI_Model
         $this->db->query($sql);
     }
 
+    
     
 
 }

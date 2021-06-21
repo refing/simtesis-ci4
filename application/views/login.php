@@ -38,9 +38,9 @@
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="<?= site_url('password') ?>">Forgot Password?</a>
-                                            </div>
+                                            <!-- <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="">Forgot Password?</a>
+                                            </div> -->
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-success w-100" value="Login" />
                                             </div>

@@ -40,14 +40,21 @@ class login extends CI_Controller {
     {
         // hancurkan semua sesi
         $this->session->sess_destroy();
-        redirect(site_url('login'));
+        redirect(site_url('/'));
     }
 	public function register()
 	{
 		$this->load->view('register');
 	}
-	public function password()
+	public function save()
 	{
-		$this->load->view('password');
+		// $nama = $this->input->post('nama');
+		// $email = $this->input->post('email');
+		// $password = $this->input->post('password');
+		// $role = $this->input->post('role');
+		$this->user_model->save();
+		$this->session->set_flashdata('success', 'Berhasil disimpan');
+		// redirect('register');
+		$this->load->view("register");
 	}
 }

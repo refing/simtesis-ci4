@@ -21,45 +21,29 @@
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-4">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                                     <div class="card-body">
-                                        <form>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                        <label for="inputFirstName">First name</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                                        <label for="inputLastName">Last name</label>
-                                                    </div>
-                                                </div>
+                                        <form action="<?= site_url('login/save') ?>" method="POST">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="nama" class="form-control" id="inputNama" placeholder="Nama Lengkap" required/>
+                                                <label for="inputNama">Nama Lengkap</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                                <input type="text" name="email" class="form-control" id="inputEmail"  placeholder="name@example.com" required/>
                                                 <label for="inputEmail">Email address</label>
                                             </div>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
-                                                        <label for="inputPassword">Password</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirm password" />
-                                                        <label for="inputPasswordConfirm">Confirm Password</label>
-                                                    </div>
-                                                </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password" required/>
+                                                <label for="inputPassword">Password</label>
                                             </div>
-                                            <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
+                                            <div class="form-floating mb-3">
+                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required/>
+                                                <label for="inputPassword2">Confirm Password</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-success w-100" value="Create Account" />
                                             </div>
                                         </form>
                                     </div>
@@ -73,7 +57,7 @@
                 </main>
             </div>
             <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
+                <footer class="py-8 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2021</div>
