@@ -31,6 +31,22 @@
                                                 <label for="inputNama">Nama Lengkap</label>
                                             </div>
                                             <div class="form-floating mb-3">
+                                                <input type="text" name="nrp" class="form-control" id="inputNrp" placeholder="NRP" required/>
+                                                <label for="inputNrp">NRP</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="judul" class="form-control" id="inputJudul" placeholder="Judul Tesis" required/>
+                                                <label for="inputJudul">Judul Tesis</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="dosbing1" class="form-control" id="inputDos1" placeholder="Dosen Pembimbing I" required/>
+                                                <label for="inputDos1">Dosen Pembimbing I</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="dosbing2" class="form-control" id="inputDos2" placeholder="Dosen Pembimbing II" />
+                                                <label for="inputDos2">Dosen Pembimbing II</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
                                                 <input type="text" name="email" class="form-control" id="inputEmail"  placeholder="name@example.com" required/>
                                                 <label for="inputEmail">Email address</label>
                                             </div>
@@ -58,7 +74,7 @@
             </div>
             <div id="layoutAuthentication_footer">
                 <footer class="py-8 bg-light mt-auto">
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mt-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2021</div>
                             <div>

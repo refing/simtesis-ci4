@@ -20,12 +20,10 @@ class site extends CI_Controller {
 	 */
 	function __construct(){
 		parent::__construct();
-		$this->load->model('product_model');
+		
 	}
 	public function index()
 	{
-		// $this->load->view('index');
-		$data['product'] = $this->product_model->get_product();
-		$this->load->view('index',$data);
+		$this->load->view('index');
 	}
 }

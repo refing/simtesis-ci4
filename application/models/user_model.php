@@ -7,6 +7,10 @@ class User_model extends CI_Model
     public $nama;
     public $password;
     public $email;
+    public $nrp;
+    public $judul;
+    public $dosbing1;
+    public $dosbing2;
     public $role;
     
     public function save()
@@ -16,6 +20,10 @@ class User_model extends CI_Model
         $this->email = $post["email"];
         $this->password = password_hash($post["password"], PASSWORD_DEFAULT);
         $this->role = $post["role"] ?? "mahasiswa";
+        $this->nrp = $post["nrp"];
+        $this->judul = $post["judul"];
+        $this->dosbing1 = $post["dosbing1"];
+        $this->dosbing2 = $post["dosbing2"];
         $this->db->insert($this->_table, $this);
     }
 
