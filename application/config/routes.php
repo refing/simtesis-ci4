@@ -59,3 +59,6 @@ $route['dashboard'] = 'dashboard';
 $route['login'] = 'login';
 $route['register'] = 'login/register';
 $route['password'] = 'login/password';
+// $route['pendaftaranyudisium'] = 'pendaftaran_yudisium';
+// $route['nilaiyudisium'] = 'nilai_yudisium';
+// $route['nilaiyudisium/edit'] = 'nilai_yudisium/edit';

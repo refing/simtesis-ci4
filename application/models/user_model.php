@@ -47,7 +47,6 @@ class User_model extends CI_Model
             if($isPasswordTrue){ 
                 // login sukses yay!
                 $this->session->set_userdata(['user_logged' => $user]);
-                $this->session->set_userdata(['role' => $user->role]);
                 $this->_updateLastLogin($user->user_id);
                 return true;
             }
