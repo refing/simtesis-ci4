@@ -33,30 +33,42 @@
                                         <form action="<?php base_url("nilaiyudisium/edit") ?>" method="post"
                                             enctype="multipart/form-data" >
 
-                                            <input type="hidden" name="id" value="<?php echo $nilai->user_id?>" />
+                                            <input type="hidden" name="user_id" value="<?php echo $nilai->user_id?>" />
 
                                             <div class="form-group">
-                                                <label for="name">Name*</label>
-                                                <input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-                                                type="text" name="name" placeholder="Product name" value="<?php echo $nilai->nama ?>" />
-                                                <div class="invalid-feedback">
-                                                    <?php echo form_error('name') ?>
-                                                </div>
+                                                <label for="nama">Nama</label>
+                                                <span class="form-control"
+                                                type="text" name="nama"><?php echo $nilai->nama ?></span>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="price">Price</label>
-                                                <input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-                                                type="number" name="price" min="0" placeholder="Product price" value="<?php echo $nilai->nrp ?>" />
-                                                <div class="invalid-feedback">
-                                                    <?php echo form_error('price') ?>
-                                                </div>
+                                            <div class="form-group mt-2">
+                                                <label for="nrp">NRP</label>
+                                                <span class="form-control"
+                                                type="text" name="nrp"><?php echo $nilai->nrp ?></span>
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="judul">Judul</label>
+                                                <span class="form-control"
+                                                type="text" name="judul"><?php echo $nilai->judul ?></span>
+                                            </div>
+
+                                           
+
+                                            <div class="form-group mt-2">
+                                                <label for="status">Status</label>
+                                                <select class="form-select" name="status" aria-label="Status">
+                                                    <option selected><?php echo $nilai->statusyudisium ?></option>
+                                                    <option>Belum Tersedia</option>
+                                                    <option>LULUS</option>
+                                                    <option>TIDAK LULUS</option>
+                                                </select>
                                             </div>
 
 
                                             
 
-                                            <input class="btn btn-success" type="submit" name="btn" value="Save" />
+                                            <input class="btn btn-success mt-4" type="submit" name="btn" value="Save" />
                                         </form>
                                     </div>
                                 </div>

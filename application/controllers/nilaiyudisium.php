@@ -53,7 +53,7 @@ class nilaiyudisium extends CI_Controller {
         // $validation->set_rules($product->rules());
 
         // if ($validation->run()) {
-            // $this->nilai_model->update();
+            $this->nilai_model->update();
         //     $this->session->set_flashdata('success', 'Berhasil disimpan');
         // }
 

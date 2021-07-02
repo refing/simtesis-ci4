@@ -28,7 +28,9 @@
 					
                         <div class="card-body">
                                 <!-- cek dulu kalo udah daftar gaboleh didaftar lagi -->
-                            <form action="#" method="post" enctype="multipart/form-data" >
+                            <form action="<?php base_url('pendaftaranyudisium/daftar') ?>" method="post" enctype="multipart/form-data" >
+                                <input type="hidden" name="user_id" value="<?php echo $this->session->userdata('user_logged')->user_id?>" />
+                                
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <span class="form-control"
@@ -66,7 +68,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="pasfoto" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -80,7 +82,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="toefl" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -94,7 +96,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="transkrip" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -108,7 +110,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="bebasbimbing" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -122,7 +124,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="ijazah" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -136,7 +138,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="formwisuda" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -150,7 +152,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="bebaslab" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -164,7 +166,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="bebasperpus" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -178,7 +180,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="bebasrbsi" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -192,7 +194,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="revisitesis" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -206,7 +208,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="accjurnal" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -220,7 +222,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="sertifseminar" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -234,7 +236,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="fcseminar" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>
@@ -248,7 +250,7 @@
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-control-file ml-2"
-                                            type="file" name="image" />
+                                            type="file" name="datawisuda" />
                                         </div>
                                         <div class='col-sm'></div>
                                         <div class='col-sm'></div>

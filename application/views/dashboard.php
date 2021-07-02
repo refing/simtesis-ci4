@@ -18,6 +18,7 @@
             <div id="layoutSidenav_content">
                 <main>
                 <!-- START CONTENT -->
+                <?php if ($this->session->userdata('user_logged')->role=='mahasiswa'): ?>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Selamat Datang, <?php echo $this->session->userdata('user_logged')->nama ?></h1>
                         <ol class="breadcrumb mb-4">
@@ -27,6 +28,12 @@
                         <!-- ganti ganti check boolean kalo dia sudah daftar sempro, sidang, yudisium -->
                         <!-- nilai sudah tersedia, cek kalo nilai sudah diupdate -->
                     </div>
+                <?php elseif ($this->session->userdata('user_logged')->role=='admin'): ?>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Selamat Datang, <?php echo $this->session->userdata('user_logged')->nama ?></h1>
+                        
+                    </div>
+                <?php endif?>
                     <!-- END CONTENT -->
                 </main>
                 <footer class="py-4 bg-light mt-auto">
