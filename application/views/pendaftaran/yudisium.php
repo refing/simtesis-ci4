@@ -288,7 +288,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+                                        <?php $iternum = 0;
+                                        foreach ($identitas as $mahasiswa): 
+                                            $iternum++; ?>
+                                        <tr>
+                                            <td>
+                                                <?php echo $iternum ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $mahasiswa->nrp ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $mahasiswa->nama ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $mahasiswa->judul ?>
+                                            </td>
+                                            <td>
+                                                a
+                                            </td>
+                                            <td width="250">
+                                                <!-- <a href="<?php echo site_url('nilaiyudisium/edit/'.$mahasiswa->user_id) ?>"
+                                                class="btn btn-small"><i class="fas fa-edit"></i> Edit</a> -->
+                                                <!-- <a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$product->product_id) ?>')"
+                                                href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a> -->
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
 
                                     </tbody>
                                 </table>
