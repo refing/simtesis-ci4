@@ -279,10 +279,11 @@
                                 <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Price</th>
-                                            <th>Photo</th>
-                                            <th>Description</th>
+                                            <th>No</th>
+                                            <th>NRP</th>
+                                            <th>Nama Mahasiswa</th>
+                                            <th>Judul Tesis</th>
+                                            <th>Berkas</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>

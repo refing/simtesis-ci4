@@ -34,13 +34,6 @@ class pendaftaranyudisium extends CI_Controller {
         $this->load->view("pendaftaran/yudisium", $data);
 		
 	}
-
-	public function daftar()
-	{
-		$this->pendaftaran_model->save();
-		$this->session->set_flashdata('success', 'Berhasil disimpan');
-		$this->load->view("pendaftaran/yudisium");
-	}
 	
 	// public function register()
 	// {
